@@ -1,19 +1,15 @@
 pipeline {
   agent any
-  stages {
-    stage('build') {
-      steps {
-        echo "done....."
+  stages{
+    stage('test') {
+      steps{
+        echo "successfully"
       }
     }
-    stage('git clone') {
-      steps {
-        git branch: 'main', url: 'https://github.com/7984495444/multibranch.git'
+    stage('clone') {
+      steps{
+        git branch: 'dev', url: 'https://github.com/7984495444/multibranch.git'
       }
     }
   }
 }
-
-
-
-
